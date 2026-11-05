@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Контактные данные для записи в салон красоты «Стрижки экспресс».">
+  <title>Контактные данные - Стрижки экспресс</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Стрижки экспресс - на главную">
+        <span class="brand__mark" aria-hidden="true">СЭ</span>
+        <span class="brand__text">
+          <span class="brand__name">Стрижки экспресс</span>
+          <span class="brand__note">Салон красоты</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#">Услуги</a>
+        <a href="#">Мастера</a>
+        <a href="#">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="steps">
+    <div class="container">
+      <ol class="steps__list" aria-label="Шаги записи">
+        <li class="steps__item steps__item--done">
+          <span class="steps__dot">1</span>
+          <span class="steps__line"></span>
+          <span class="steps__tick"></span>
+        </li>
+        <li class="steps__item steps__item--done">
+          <span class="steps__dot">2</span>
+          <span class="steps__line"></span>
+          <span class="steps__tick"></span>
+        </li>
+        <li class="steps__item steps__item--done">
+          <span class="steps__dot">3</span>
+          <span class="steps__line"></span>
+          <span class="steps__tick"></span>
+        </li>
+        <li class="steps__item steps__item--current" aria-current="step">
+          <span class="steps__dot">4</span>
+          <span class="steps__line"></span>
+          <span class="steps__tick"></span>
+        </li>
+        <li class="steps__item">
+          <span class="steps__dot">5</span>
+          <span class="steps__line"></span>
+          <span class="steps__tick"></span>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <main class="booking">
+    <div class="container">
+      <div class="hero hero--center">
+        <div class="hero__text">
+          <p class="eyebrow">Шаг 4 из 5</p>
+          <h1>Контактные данные</h1>
+          <p class="hero__lead">Пожалуйста, укажите имя, телефон и комментарий к записи. После отправки мы проверим данные и покажем итоговую заявку.</p>
+        </div>
+
+        <aside class="summary summary--booking" aria-label="Резюме записи">
+          <p class="summary__label">Резюме записи</p>
+          <p class="summary__title">Стрижка и укладка</p>
+          <ul class="summary__list">
+            <li class="summary__item">
+              <span class="summary__badge" aria-hidden="true">А</span>
+              <span class="summary__info">
+                <strong>Анна Смирнова</strong>
+                <span>Стилист • 4,9</span>
+              </span>
+            </li>
+            <li class="summary__item">
+              <span class="summary__badge" aria-hidden="true">60</span>
+              <span class="summary__info">
+                <strong>60 минут</strong>
+                <span>Полный комплекс: стрижка, формирование контура, укладка и финиш</span>
+              </span>
+            </li>
+            <li class="summary__item">
+              <span class="summary__badge" aria-hidden="true">2 800</span>
+              <span class="summary__info">
+                <strong>2 800 ₽</strong>
+                <span>Оплата на месте в салоне</span>
+              </span>
+            </li>
+            <li class="summary__item">
+              <span class="summary__badge" aria-hidden="true">22</span>
+              <span class="summary__info">
+                <strong>Четверг, 22 октября 2026</strong>
+                <span>14:00-15:00</span>
+              </span>
+            </li>
+          </ul>
+        </aside>
+      </div>
+
+      <form action="review.html" method="get">
+        <div class="card form-card">
+          <div class="field">
+            <label for="client-name">Имя *</label>
+            <input id="client-name" name="name" type="text" value="Мария Иванова" autocomplete="name" minlength="2" maxlength="60" pattern="[А-Яа-яЁёA-Za-z\s-]{2,}" title="Введите имя: только буквы, пробелы и дефис." required>
+          </div>
+
+          <div class="field">
+            <label for="client-phone">Телефон *</label>
+            <input id="client-phone" name="phone" type="tel" value="+7 (916) 234-56-78" autocomplete="tel" inputmode="tel" maxlength="18" pattern="\+7\s?\(?\d{3}\)?\s?\d{3}[-\s]?\d{2}[-\s]?\d{2}" title="Введите телефон в формате +7 (999) 123-45-67." required>
+          </div>
+
+          <div class="field">
+            <label for="client-email">Email (необязательно)</label>
+            <input id="client-email" name="email" type="email" value="maria.ivanova@mail.ru" autocomplete="email" maxlength="80">
+          </div>
+
+          <div class="field">
+            <label for="client-comment">Комментарий к записи</label>
+            <textarea id="client-comment" name="comment" maxlength="500">Хочу сохранить длину.</textarea>
+          </div>
+
+          <label class="agree">
+            <input type="checkbox" name="agreement" required checked>
+            <span>Я согласна на обработку персональных данных для оформления записи.</span>
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <p class="form-note">После подтверждения запись будет зафиксирована в системе.</p>
+          <button class="btn btn--primary" type="submit">
+            Проверить запись
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M4 12h15"></path>
+              <path d="m13 6 6 6-6 6"></path>
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html" aria-label="Стрижки экспресс - на главную">
+          <span class="brand__mark brand__mark--light" aria-hidden="true">СЭ</span>
+          <span class="brand__text">
+            <span class="brand__name">Стрижки экспресс</span>
+            <span class="brand__note">Салон красоты</span>
+          </span>
+        </a>
+        <address class="footer__address">Рыбинск, ул. Плеханова 34</address>
+        <p class="footer__text"><a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+        <p class="footer__text">Ежедневно 10:00-21:00</p>
+      </div>
+
+      <div class="footer__col">
+        <h2>Контакты</h2>
+        <ul class="footer__list">
+          <li>
+            <a class="footer__link" href="tel:+74951234567">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M6.6 3.5 9 3.2a1 1 0 0 1 1.1.8l.8 3.2a1 1 0 0 1-.5 1.1l-1.5.9a13.6 13.6 0 0 0 6.9 6.9l.9-1.5a1 1 0 0 1 1.1-.5l3.2.8a1 1 0 0 1 .8 1.1l-.3 2.4a1.5 1.5 0 0 1-1.6 1.3A17.7 17.7 0 0 1 5.3 5.1a1.5 1.5 0 0 1 1.3-1.6Z"></path>
+              </svg>
+              +7 (495) 123-45-67
+            </a>
+          </li>
+          <li>
+            <a class="footer__link" href="mailto:str@expr.ru">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="m3.5 6.5 8.5 6 8.5-6"></path>
+              </svg>
+              str@expr.ru
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h2>Социальные сети</h2>
+        <ul class="footer__list">
+          <li><a class="footer__link footer__link--plain" href="#">Instagram</a></li>
+          <li><a class="footer__link footer__link--plain" href="#">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© 2026 Салон красоты «Стрижки экспресс»</p>
+      <a href="#">Политика конфиденциальности</a>
+    </div>
+  </footer>
+</body>
+</html>
