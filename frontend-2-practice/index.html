@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Запись в салон красоты «Стрижки экспресс»: выберите дату и время визита.">
+  <title>Выберите дату и время - Стрижки экспресс</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Стрижки экспресс - на главную">
+        <span class="brand__mark" aria-hidden="true">СЭ</span>
+        <span class="brand__text">
+          <span class="brand__name">Стрижки экспресс</span>
+          <span class="brand__note">Салон красоты</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#">Услуги</a>
+        <a href="#">Мастера</a>
+        <a href="#">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="steps">
+    <div class="container">
+      <ol class="steps__list" aria-label="Шаги записи">
+        <li class="steps__item steps__item--done">
+          <span class="steps__dot">1</span>
+          <span class="steps__line"></span>
+          <span class="steps__tick"></span>
+        </li>
+        <li class="steps__item steps__item--done">
+          <span class="steps__dot">2</span>
+          <span class="steps__line"></span>
+          <span class="steps__tick"></span>
+        </li>
+        <li class="steps__item steps__item--current" aria-current="step">
+          <span class="steps__dot">3</span>
+          <span class="steps__line"></span>
+          <span class="steps__tick"></span>
+        </li>
+        <li class="steps__item">
+          <span class="steps__dot">4</span>
+          <span class="steps__line"></span>
+          <span class="steps__tick"></span>
+        </li>
+        <li class="steps__item">
+          <span class="steps__dot">5</span>
+          <span class="steps__line"></span>
+          <span class="steps__tick"></span>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <main class="booking">
+    <div class="container">
+      <div class="hero">
+        <div class="hero__text">
+          <p class="eyebrow">Запись в салон</p>
+          <h1>Выберите дату и время</h1>
+          <p class="hero__meta">Анна Смирнова • Стрижка и укладка • 60 минут • 2 800 ₽</p>
+        </div>
+        <aside class="summary" aria-label="Выбранная услуга">
+          <p class="summary__label">Выбрано</p>
+          <p class="summary__title">Стрижка и укладка</p>
+          <div class="summary__row">
+            <span class="summary__price">2 800 ₽</span>
+            <span class="summary__duration">60 минут</span>
+          </div>
+        </aside>
+      </div>
+
+      <div class="booking__grid">
+        <section class="card calendar" aria-labelledby="calendar-title">
+          <div class="calendar__head">
+            <h2 id="calendar-title">Календарь</h2>
+            <div class="calendar__nav">
+              <button class="calendar__arrow" type="button" id="prev-month" aria-label="Предыдущий месяц" disabled>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M15 5 8 12l7 7"></path>
+                </svg>
+              </button>
+              <button class="calendar__arrow" type="button" id="next-month" aria-label="Следующий месяц">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="m9 5 7 7-7 7"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="calendar__weekdays" aria-hidden="true">
+            <span>Пн</span>
+            <span>Вт</span>
+            <span>Ср</span>
+            <span>Чт</span>
+            <span>Пт</span>
+            <span>Сб</span>
+            <span>Вс</span>
+          </div>
+
+          <div class="calendar__days" id="calendar-days"></div>
+        </section>
+
+        <section class="card times" aria-labelledby="times-title">
+          <h2 id="times-title">Доступное время</h2>
+          <div class="times__grid" id="time-slots"></div>
+        </section>
+      </div>
+
+      <div class="booking__footer">
+        <div class="booking__when" aria-live="polite">
+          <p class="booking__date" id="selected-date">Выберите дату</p>
+          <p class="booking__details" id="selected-details">Анна Смирнова • Стрижка и укладка</p>
+        </div>
+        <button class="btn btn--primary" type="button" id="next-step" disabled>
+          Продолжить
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M4 12h15"></path>
+            <path d="m13 6 6 6-6 6"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html" aria-label="Стрижки экспресс - на главную">
+          <span class="brand__mark brand__mark--light" aria-hidden="true">СЭ</span>
+          <span class="brand__text">
+            <span class="brand__name">Стрижки экспресс</span>
+            <span class="brand__note">Салон красоты</span>
+          </span>
+        </a>
+        <address class="footer__address">Рыбинск, ул. Плеханова 34</address>
+        <p class="footer__text"><a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+        <p class="footer__text">Ежедневно 10:00-21:00</p>
+      </div>
+
+      <div class="footer__col">
+        <h2>Контакты</h2>
+        <ul class="footer__list">
+          <li>
+            <a class="footer__link" href="tel:+74951234567">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M6.6 3.5 9 3.2a1 1 0 0 1 1.1.8l.8 3.2a1 1 0 0 1-.5 1.1l-1.5.9a13.6 13.6 0 0 0 6.9 6.9l.9-1.5a1 1 0 0 1 1.1-.5l3.2.8a1 1 0 0 1 .8 1.1l-.3 2.4a1.5 1.5 0 0 1-1.6 1.3A17.7 17.7 0 0 1 5.3 5.1a1.5 1.5 0 0 1 1.3-1.6Z"></path>
+              </svg>
+              +7 (495) 123-45-67
+            </a>
+          </li>
+          <li>
+            <a class="footer__link" href="mailto:str@expr.ru">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="m3.5 6.5 8.5 6 8.5-6"></path>
+              </svg>
+              str@expr.ru
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h2>Социальные сети</h2>
+        <ul class="footer__list">
+          <li><a class="footer__link footer__link--plain" href="#">Instagram</a></li>
+          <li><a class="footer__link footer__link--plain" href="#">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© 2026 Салон красоты «Стрижки экспресс»</p>
+      <a href="#">Политика конфиденциальности</a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
