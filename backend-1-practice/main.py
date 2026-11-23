@@ -80,7 +80,7 @@ def is_working_time(value):
         return False
 
     minutes = parsed.hour * 60 + parsed.minute
-    return SALON_OPEN_MINUTES <= minutes <= SALON_CLOSE_MINUTES
+    return SALON_OPEN_MINUTES <= minutes <= SALON_CLOSE_MINUTES - 60
 
 
 def create_appointment(client_name, master_id, service_id, time):
